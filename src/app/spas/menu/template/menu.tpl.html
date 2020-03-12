@@ -1,14 +1,14 @@
 <style>
   .dropdown-menu {
-    background-color: transparent !important;
+    background-color: dimgrey !important;
   }
   .dropdown-item {
-    background-color: transparent !important;
+    background-color: dimgrey !important;
   }
 </style>
-<nav class="navbar navbar-expand-lg" style="border-top: -20px;" ng-controller="MenuController as vm">
+<nav class="navbar navbar-expand-lg" style="border-top: -20px; background-color: rgb(86, 112, 122);" ng-controller="MenuController as vm">
   <div class="navbar-header">
-    <a class="navbar-brand" ng-click="vm.chamarPagina('home')" style="font-family: 'Courier New', 'Monaco', 'monospace'; font-weight: bold; color: white; cursor: pointer;">Home</a>
+    <a class="navbar-brand" ng-click="vm.chamarPagina('home')" style="font-family: 'Arial black', 'Monaco', 'monospace'; font-weight: bold; color: white; cursor: pointer;">HOME</a>
   </div>
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
@@ -16,28 +16,28 @@
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown"
           aria-haspopup="true" aria-expanded="false"
-          style="font-family: 'Courier New', 'Monaco', 'monospace'; font-weight: bold; color: white; cursor: pointer;">
-          Pessoa
+          style="font-family: 'Arial black', 'Monaco', 'monospace'; font-weight: bold; color: white; cursor: pointer;">
+          PESSOA
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <a class="dropdown-item" ng-click="vm.chamarPagina('cadastrarPessoa')"
-            style="font-weight: bold; color: white; cursor: pointer;">Cadastrar</a>
+            style="font-weight: bold; color: white; cursor: pointer;">CADASTRAR</a>
           <a class="dropdown-item" ng-click="vm.chamarPagina('listarPessoa')"
-            style="font-weight: bold; color: white; cursor: pointer;">Listar</a>
+            style="font-weight: bold; color: white; cursor: pointer;">LISTAR</a>
         </div>
       </li>
 
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown"
           aria-haspopup="true" aria-expanded="false"
-          style="font-family: 'Courier New', 'Monaco', 'monospace'; font-weight: bold; color: white; cursor: pointer;">
-          Perfil
+          style="font-family: 'Arial black', 'Monaco', 'monospace'; font-weight: bold; color: white; cursor: pointer;">
+          PERFIL
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <a class="dropdown-item" ng-click="vm.chamarPagina('EditarPerfis')"
-            style="font-weight: bold; color: white; cursor: pointer;">Cadastrar</a>
+            style="font-weight: bold; color: white; cursor: pointer;">CADASTRAR</a>
           <a class="dropdown-item" ng-click="vm.chamarPagina('listarPerfis')"
-            style="font-weight: bold; color: white; cursor: pointer;">Listar</a>
+            style="font-weight: bold; color: white; cursor: pointer;">LISTAR</a>
         </div>
       </li>
     </ul>
