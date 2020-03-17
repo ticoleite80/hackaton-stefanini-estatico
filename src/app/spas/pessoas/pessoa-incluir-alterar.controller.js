@@ -49,18 +49,17 @@ function PessoaIncluirAlterarController(
 
         vm.tituloTela = "Cadastrar Pessoa";
         vm.acao = "Cadastrar";
-
-
+        vm.idPessoa = $routeParams.idPessoa;
         /**Recuperar a lista de perfil */
         vm.listar(vm.urlPerfil).then(
             function (response) {
                 if (response !== undefined) {
                     vm.listaPerfil = response;
-                    if ($routeParams.idPessoa) {
+                    if (vm.idPessoa) {
                         vm.tituloTela = "Editar Pessoa";
                         vm.acao = "Editar";
 
-                        vm.recuperarObjetoPorIDURL($routeParams.idPessoa, vm.urlPessoa).then(
+                        vm.recuperarObjetoPorIDURL(vm.idPessoa, vm.urlPessoa).then(
                             function (pessoaRetorno) {
                                 if (pessoaRetorno !== undefined) {
                                     vm.pessoa = pessoaRetorno;
@@ -116,14 +115,14 @@ function PessoaIncluirAlterarController(
         objetoDados.enderecos = listaEndereco;
         if (vm.perfil !== null){
 
-            var isNovoPerfil = true;
+            vm.isNovoPerfil = true;
             
             angular.forEach(objetoDados.perfils, function (value, key) {
                 if (value.id === vm.perfil.id) {
-                    isNovoPerfil = false;
+                    vm.isNovoPerfil = false;
                 }
             });
-            if (isNovoPerfil)
+            if (vm.isNovoPerfil)
                 objetoDados.perfils.push(vm.perfil);
         }
         if (vm.acao == "Cadastrar") {
